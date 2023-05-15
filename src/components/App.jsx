@@ -1,7 +1,6 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCurrentUser } from 'redux/auth/operations';
-import { fetchContacts } from 'redux/contacts/operations';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import RestrictedRoute from './RestrictedRoute';
@@ -17,7 +16,6 @@ export default function App() {
 
   useEffect(() => {
     dispatch(getCurrentUser());
-    dispatch(fetchContacts())
   }, [dispatch]);
 
   return (
