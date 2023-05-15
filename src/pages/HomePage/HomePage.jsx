@@ -1,4 +1,4 @@
-import { Container, Heading, Title } from './HomePage.styled'
+import { Container, Heading, Title, Phrase } from './HomePage.styled';
 
 const HomePage = () => {
   return (
@@ -6,7 +6,10 @@ const HomePage = () => {
       <Container>
         <Heading>Telephone</Heading>
         <Title>directory</Title>
-        </Container>
+      </Container>
+      <Phrase>
+        Create Important List of Contacts as It is Back Up for Peace Of Mind
+      </Phrase>
     </>
   );
 };

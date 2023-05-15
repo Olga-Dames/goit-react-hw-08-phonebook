@@ -6,7 +6,6 @@ export const Container = styled.div`
   padding-top: 80px;
   display: flex;
   flex-direction: column;
-  // background-color: rgba(230, 52, 98, 0.3);
   background-image: url('https://wallpaperaccess.com/full/632782.jpg');
   background-size: cover;
   background-position: 50% 100%;
@@ -30,7 +29,6 @@ export const Title = styled.h2`
   position: absolute;
   bottom: 200px;
   left: 100px;
-
   text-align: center;
   font-size: 48px;
   font-style: italic;
@@ -39,19 +37,18 @@ export const Title = styled.h2`
   transform: rotate(-90deg);
 `;
 
-// export const Empty = styled.p`
-//   margin-top: 30px;
-//   font-size: 24px;
-//   font-style: italic;
-//   font-weight: bold;
-//   color: #827081;
-// `;
+export const Phrase = styled.h2`
+  position: absolute;
+  width: 600px;
+  bottom: 20%;
+  right: 5%;
+  padding: 60px;
+  text-align: center;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: bold;
+  color: #827081;
+  border: 2px solid #827081;
+  border-radius: 10px;
+`;
 
-// export const Main = styled.div`
-//   display: flex;
-//   gap: 100px;
-// `;
-
-// export const Contacts = styled.div`
-
-// `;

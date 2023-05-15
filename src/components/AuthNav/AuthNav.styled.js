@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const AuthBox = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 `;
 
 export const AuthPage = styled(NavLink)`
@@ -18,13 +18,31 @@ export const AuthPage = styled(NavLink)`
   font-weight: bold;
   color: #827081;
   text-decoration: none;
+  padding-bottom: 5px;
 
-
-  &:hover {
-    color: red;
+  &,
+  &:after,
+  &:before {
+    transition: all 0.5s;
   }
 
-  &.active {
-    
+  &:hover {
+    color: #f5b2d4;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #f5b2d4;
+    height: 2px;
+  }
+  &:hover:after {
+    width: 100%;
   }
 `;
