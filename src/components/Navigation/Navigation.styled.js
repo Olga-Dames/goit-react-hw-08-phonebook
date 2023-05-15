@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import { keyframes } from '@emotion/react';
 
 export const NavBox = styled.div`
   display: flex;
