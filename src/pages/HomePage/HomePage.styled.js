@@ -41,7 +41,7 @@ export const Phrase = styled.h2`
   position: absolute;
   width: 600px;
   bottom: 20%;
-  right: 5%;
+  right: 15%;
   padding: 60px;
   text-align: center;
   font-size: 64px;
