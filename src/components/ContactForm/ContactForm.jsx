@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Form, Input, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
-import Notiflix from 'notiflix';
+import { toast } from 'react-toastify';
 import { addContact } from 'redux/contacts/operations';
+import { params } from 'components/ToastParams';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export default function ContactForm() {
       number: number,
     };
     if (isNameExist) {
-      Notiflix.Notify.info(`${name} is already in contacts`);
+      toast.info(`${name} is already in contacts`, params);
       reset();
       return;
     }
