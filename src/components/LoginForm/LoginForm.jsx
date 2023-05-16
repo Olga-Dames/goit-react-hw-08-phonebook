@@ -1,4 +1,11 @@
-import { LogInForm, Label, LoginInput, Wrapper, LoginButton, LoginTitle } from './LoginForm.styled';
+import {
+  LogInForm,
+  Label,
+  LoginInput,
+  Wrapper,
+  LoginButton,
+  LoginTitle,
+} from './LoginForm.styled';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operations';
 import { MdEmail, MdPassword } from 'react-icons/md';
@@ -24,13 +31,13 @@ export default function LoginForm() {
       <LogInForm onSubmit={handleLoginSubmit}>
         <Wrapper>
           <Label>
-            <MdEmail size={25} color='#827081' />
+            <MdEmail size={25} color="#827081" />
           </Label>
           <LoginInput type="email" name="email" placeholder="Email" required />
         </Wrapper>
         <Wrapper>
           <Label>
-            <MdPassword size={25} color='#827081'/>
+            <MdPassword size={25} color="#827081" />
           </Label>
           <LoginInput
             type="password"

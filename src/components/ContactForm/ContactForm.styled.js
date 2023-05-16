@@ -11,7 +11,7 @@ export const Form = styled.form`
   gap: 20px;
   border-radius: 5px;
   border: 2px solid #827081;
-  background-color: #F5B2D4;
+  background-color: #f5b2d4;
 `;
 
 export const Input = styled.input`

@@ -6,7 +6,7 @@ import {
   RegisterWrapper,
   RegisterLabel,
   RegForm,
-  RegisterTitle
+  RegisterTitle,
 } from './RegisterForm.styled';
 import { MdEmail, MdPassword, MdOutlinePerson } from 'react-icons/md';
 

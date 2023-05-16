@@ -2,9 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUserName } from 'redux/auth/selectors';
 import { logout } from 'redux/auth/operations';
-import {IoIosLogOut} from 'react-icons/io';
+import { IoIosLogOut } from 'react-icons/io';
 import { Logout, LogoutBox } from './UserMenu.styled';
-
 
 export default function UserMenu() {
   const name = useSelector(selectUserName);
@@ -17,7 +16,7 @@ export default function UserMenu() {
     <LogoutBox>
       Welcome, {name}
       <Logout type="button" onClick={handleLogout}>
-      <IoIosLogOut size={30} color='#634488'/>
+        <IoIosLogOut size={30} color="#634488" />
       </Logout>
     </LogoutBox>
   );

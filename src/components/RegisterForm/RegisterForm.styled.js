@@ -125,13 +125,13 @@ export const RegisterButton = styled.button`
 `;
 
 export const RegisterTitle = styled.h2`
-position: absolute;
-bottom: 300px;
-left: 30px;
-margin-bottom: 15px;
-font-size: 82px;
-font-style: italic;
-font-weight: bold;
-color: #827081;
-transform: rotate(-90deg);
+  position: absolute;
+  bottom: 300px;
+  left: 30px;
+  margin-bottom: 15px;
+  font-size: 82px;
+  font-style: italic;
+  font-weight: bold;
+  color: #827081;
+  transform: rotate(-90deg);
 `;

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -10,6 +11,16 @@ const setAuthToken = token => {
 const clearAuthToken = () => {
   axios.defaults.headers.common.Authorization = '';
 };
+const params = {
+  position: 'top-center',
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: 'light',
+};
 
 export const register = createAsyncThunk(
   'auth/register',
@@ -19,6 +30,7 @@ export const register = createAsyncThunk(
       setAuthToken(response.data.token);
       return response.data;
     } catch (error) {
+      toast.error(error.message, params);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -32,6 +44,7 @@ export const login = createAsyncThunk(
       setAuthToken(response.data.token);
       return response.data;
     } catch (error) {
+      toast.error(error.message, params);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -43,6 +56,7 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     clearAuthToken();
     return response.data;
   } catch (error) {
+    toast.error(error.message, params);
     return thunkAPI.rejectWithValue(error.message);
   }
 });
@@ -61,6 +75,7 @@ export const getCurrentUser = createAsyncThunk(
       const response = await axios.get('/users/current');
       return response.data;
     } catch (error) {
+      toast.error(error.message, params);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

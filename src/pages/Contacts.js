@@ -13,6 +13,7 @@ import {
 } from '../components/App.styled';
 import { selectContacts, selectError } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
+import { toast } from 'react-toastify';
 
 export default function ContactsPage() {
   const contacts = useSelector(selectContacts);
@@ -22,7 +23,18 @@ export default function ContactsPage() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-  
+
+  const params = {
+    position: 'top-center',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  };
+
   return (
     <Main>
       <Container>
@@ -32,7 +44,7 @@ export default function ContactsPage() {
       </Container>
       <Contacts>
         <Title>Contacts</Title>
-        {error && <p>{error}</p>}
+        {error && toast.error(error.message, params)}
         {contacts.length > 0 ? (
           <ContactList />
         ) : (
